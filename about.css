@@ -1,0 +1,329 @@
+@import url('reset.css');
+
+body{
+	font-family: arial;
+	line-height: 1.6;
+	background-color: white;
+	background-image: url(pic/nasa.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* ----------- Top ----------- */
+
+.top{
+	height: 80px;
+	display: flex;
+	align-items: center;
+
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+	}
+
+.top-main{
+	display: flex;
+	align-items: center;
+	height: 80px;
+	width: 100%;
+}
+
+.top-main img{
+	width: 80px;
+	margin-left: 100px;
+}
+
+.botton{
+	display: flex;
+	margin-left: auto;
+	margin-right: 100px;
+	align-items: center;
+}
+
+.botton ul{
+	display: flex;
+
+	width: 585px;
+}
+
+.botton li{
+	margin-right: 20px;
+	width: 100px;
+	text-align: center;
+}
+
+.botton a{
+	text-decoration: none;
+	color:white;
+	align-content: center;
+	display: block;
+	padding: 25px 0;
+
+	font-size: 18px;
+}
+
+.botton li:hover{
+	/*background-color: rgba(210, 210, 210, 0.3);*/
+	border-bottom: 3px solid white;
+}
+
+.fas{
+	color: white;
+	font-size: 25px;
+
+	display: none;
+}
+
+a.showMenu{
+	height: 25px;
+}
+
+/*---------------------- ul選單 -----------------------*/
+
+.botton li:nth-child(3) ul{
+	display: none;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.botton li:nth-child(3) ul a{
+}
+
+.botton li:nth-child(3) ul a:hover{
+}
+
+.botton li:nth-child(3) li:hover{
+	background-color: rgba(0, 0, 0, 0);
+	border-bottom: 1px solid white;
+}
+
+.botton li:nth-child(3):hover > ul{
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	width: 100%;
+	top: 80px;
+	right: 0;
+}
+
+.botton li:nth-child(3) li{
+	width: 100%;
+}
+
+/*------------------------- company info -----------------------------*/
+
+.company{
+	display: flex;
+	margin: 80px 10%;
+	align-items: center;
+
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+	padding-bottom: 80px;
+}
+
+.company img{
+	flex-shrink: 1;
+	width: 200px;
+	margin-right: 50px;
+	border: 5px solid white;
+	border-radius: 5%;
+}
+
+.company p{
+	color: white;
+	font-size: 16px;
+	text-align: justify;
+}
+
+/*------------------------- founder info -----------------------------*/
+
+.boss{
+	display: flex;
+	padding: 0 10% 50px 10%;
+	align-items: center;
+
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+	padding-bottom: 80px;
+}
+
+.boss img{
+	width: 200px;
+	margin-left: 50px;
+	border: 5px solid white;
+	border-radius: 50%;
+
+	order: 2;
+}
+
+.boss p{
+	color: white;
+	font-size: 16px;
+	text-align: justify;
+
+	order: 1;
+}
+
+/*------------------------- end -----------------------------*/
+
+.info{
+	color: white;
+	font-size: 16px;
+	text-align: center;
+
+	margin-top: 50px;
+	/*border-top:1px solid rgba(210, 210, 210);*/
+}
+
+.info h3{
+	margin-top: 30px;
+}
+
+.copy{
+	margin-top:30px;
+}
+
+/*------------------------- rwd 1024px -----------------------------*/
+
+@media screen and (max-width: 1024px){
+
+	.top{
+		justify-content: space-between;
+		height: 50px;
+	}
+
+	.top-main a{
+		height: 30px;
+	}
+
+	.fas{
+		float: right;
+
+		display: block;
+		width: 50px;
+    	margin-right: 20px;
+	}
+
+	.botton{
+    	max-height: 0px;
+    	overflow: hidden;
+    	transition: max-height 2s;
+    	position: absolute;
+
+    	left: 0;
+    	right: 0;
+    	text-align: center;
+  		margin: 0;
+  		flex-direction: column;
+  		margin-right: 0;
+		top: 50px;
+  	}
+
+  	.botton li{
+  		/*margin: 0;*/
+  		width: 100%;
+  		background-color: rgba(17, 17, 17, 0.5);
+  		padding: 10px 0;
+  		margin: 0;
+  	}
+
+  	.botton li a{
+    	transition: all 0.3s;
+    	color: white;
+    	padding: 0;
+  	}
+  	.botton li:hover{
+		background-color: rgba(17, 17, 17, 0.8);
+	}
+   
+  	.showMenu{
+    	display: block;
+    	font-size:20px;
+  	} 
+  		/*jQ點擊後動態在 body 加上 class ，藉著修改 max-height，畫面就顯示了*/
+  	.menu-show{
+    	max-height: 500px;
+  	}
+
+  	a.showMenu{
+		height: 25px;
+	}
+
+  /*---*/
+
+	.top-main{
+		/*flex-direction: column;*/
+		height: 50px;
+		background-color: rgba(17, 17, 17, 0.5);
+
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.top-main img{
+		width: 50px;
+		margin-left: 50px;
+	}
+
+	/*---------------- company ------------------*/
+
+	.company{
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.company img{
+		margin: 0 0 50px 0;
+	}
+
+
+
+	/*---------------- boss ------------------*/
+	.boss{
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.boss img{
+		margin: 0 0 50px 0;
+		order: 1;
+	}
+
+	.boss p{
+		order: 2;
+	}
+
+
+}
+
+/*------------------------- rwd 428px -----------------------------*/
+
+@media screen and (max-width: 428px){
+
+	.top-main img{
+		width: 50px;
+		margin-left: 20px;
+	}
+
+	.fas{
+		/*width: 50px;*/
+    	margin-right: 20px;
+	}
+
+	.company p{
+		font-size: 14px;
+	}
+
+	.boss p{
+		font-size: 14px;
+	}
+
+	a.showMenu{
+		height: 25px;
+	}
+
+}
+
+
+
+
+
+
+
+
