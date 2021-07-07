@@ -103,7 +103,7 @@ body{
 
 /* ----------- Key Visual ----------- */
 .kv{
-	background-image: url(pic/banner2.png);
+	background-image: url(banner2.png);
 	width: 100%;
 	background-size: contain;
 	background-repeat: no-repeat;
