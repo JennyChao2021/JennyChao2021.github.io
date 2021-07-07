@@ -1,8 +1,8 @@
 
  $ ( ".kv" ) .backstretch ( [ 
-    "pic/banner3.png" , 
-    "pic/banner2.png" , 
-    "pic/banner4.png"     
+    "banner3.png" , 
+    "banner2.png" , 
+    "banner4.png"     
   ] ,  { duration : 4000 } ) ;
 
 
